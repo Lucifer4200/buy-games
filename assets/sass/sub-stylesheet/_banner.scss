@@ -1,0 +1,15 @@
+//?==== page header css start ====?//
+.pbwp-page-header {
+    .pbwp-page-title {
+        padding: 15px 0;
+        text-align: center;
+        background: #F8E15E;
+        h3 {
+            margin: 0;
+            @include breakpoint (max-sm) {
+                font-size: 30px;
+            }
+        }
+    }
+}
+//?==== page header css ends  ====?//

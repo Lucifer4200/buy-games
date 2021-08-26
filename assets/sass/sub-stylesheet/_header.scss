@@ -1,0 +1,196 @@
+//?==== header area css start ====?//
+header {
+    .pbwp-header-container {
+        .pbwp-header-row {
+            @extend %flex;
+            align-items: center;
+            background: #F6F6F6;
+            padding: 10px;
+            justify-content: space-between;
+            @include breakpoint (md) {
+                padding: 10px 30px;
+            }
+            @include breakpoint (xl) {
+                padding: 10px 60px
+            }
+            .pbwp-header-logo {
+                width: 30%;
+                @include breakpoint (sm) {
+                    width: 20%;
+                }
+                a {
+                    img {
+                        height: 40px;
+                    }
+                }
+            }
+            .pbwp-header-right {
+                @extend %flex;
+                align-items: center;
+                position: relative;
+                justify-content: space-between;
+                width: calc(100% - 30%);
+                @include breakpoint (sm) {
+                    width: calc(100% - 20%);
+                }
+                .pbwp-serarch {
+                    width: 40px;
+                    margin-left: auto;
+                    @include breakpoint (lg) {
+                        width: calc(100% - 40%);
+                    }
+                    @include breakpoint (xl) {
+                        width: calc(100% - 30%);
+                    }
+                    &.active {
+                        -webkit-transition: width 0.7s;
+                        -moz-transition: width 0.7s;
+                        transition: width 0.7s;
+                        @include breakpoint (lg) {
+                            width: calc(100% - 40%);
+                        }
+                        @include breakpoint (xl) {
+                            width: calc(100% - 35%);
+                        }
+                        @include breakpoint (max-lg) {
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            right: 0;
+                            width: 98%;
+                            z-index: 111;
+                            transform: translateY(-50%);
+                        }
+                    }
+                   .pbwp-input-group {
+                       position: relative;
+                       input {
+                        height: 36px;
+                        width: 100%;
+                        padding: 0 10px;
+                        border-radius: 25px;
+                        border: 1px solid #F8E15E;
+                        &::placeholder {
+                            font-size: 12px;
+                        }
+                       }
+                       .group-word {
+                           position: absolute;
+                           top: 50%;
+                           right: 60px;
+                           transform: translateY(-50%);
+                           @include breakpoint (max-lg) {
+                               display: none;
+                           }
+                           button {
+                               margin: 0 5px;
+                               padding: 5px;
+                               cursor: pointer;
+                               font-size: 10px;
+                               border-radius: 25px;
+                           }
+                       }
+                       .pbwp-serch-icon {
+                           position: absolute;
+                           top: 0;
+                           right: 0;
+                           height: 100%;
+                           width: 40px;
+                           line-height: 36px;
+                           text-align: center;
+                           border-radius: 25px;
+                           background: #F8E15E;
+                           &::before {
+                               @extend %absolute;
+                               top: 50%;
+                               width: 5px;
+                               height: 2px;
+                               left: -11px;
+                               border-right: solid 7px #F8E15E;
+                               border-bottom: solid 5px transparent;
+                               border-top: solid 4px transparent;
+                               -webkit-transform: translateY(-50%);
+                               transform: translateY(-50%);
+                           }
+                           button {
+                               cursor: pointer;
+                               background: transparent;
+                               i {
+    
+                               }
+                           }
+                       }
+                   } 
+                }
+                .pbwp-header-icon {
+                    width: 130px;
+                    &.hide {
+                        @include breakpoint (max-lg) {
+                            position: absolute;
+                            top: 50%;
+                            right: 0;
+                            width: 130px;
+                            transform: translateY(-50%);
+                        }
+                    }
+                    @include breakpoint (lg) {
+                        width: 40%;
+                    }
+                    @include  breakpoint (xl) {
+                        width: 30%;
+                    }
+                    ul.icon-list {
+                        padding: 0;
+                        margin: 0;
+                        list-style: none;
+                        @extend %flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        li {
+                            button {
+                                margin: 0 5px;
+                                cursor: pointer;
+                                background: transparent;
+                                @include breakpoint (lg) {
+                                    padding: 5px;
+                                    margin: 5px 10px;
+                                }
+                            }
+                            &:last-child {
+                                button {
+                                    padding: 10px;
+                                    @include breakpoint (lg) {
+                                        background: #E5E5E5
+                                    }
+                                    i {
+                                        position: relative;
+                                        &::after {
+                                            position: absolute;
+                                            content: '2';
+                                            top: -5px;
+                                            right: -3px;
+                                            height: 12px;
+                                            width: 12px;
+                                            line-height: 12px;
+                                            color: #fff;
+                                            font-size: 10px;
+                                            border-radius: 100%;
+                                            background: #f10c14ec;
+                                        }
+                                    }
+                                    span.price {
+                                        display: none;
+                                        @include breakpoint (lg) {
+                                            display: inline-flex;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//?==== header area css ends  ====?//
